@@ -34,12 +34,6 @@ pip install -r requirements.txt
 
 ### 2. Execução do Notebook Interativo
 
-O principal ambiente para exploração e visualização é o Jupyter Notebook. Ele demonstra a integração entre a análise de dados e a modelagem da curva de aprendizado.
-
-```bash
-jupyter lab analise_dados.ipynb
-```
-
 Abra o arquivo `analise_dados.ipynb` e execute as células sequencialmente para ver a análise em ação, incluindo gráficos interativos que mostram a curva de aprendizado de diferentes países.
 
 ### 3. Análise de Séries Temporais via Script
