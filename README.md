@@ -1,73 +1,74 @@
 # GS Python & Cálculo - Análise sobre o Futuro do Trabalho
 
+## Introdução
+
 Este projeto foi desenvolvido para a Global Solution (GS) e aborda o tema "O Futuro do Trabalho: A Era da Requalificação Contínua". A análise combina conceitos de programação em Python para análise de dados e de Cálculo para modelagem matemática.
 
-## 📝 Descrição
+## Visão Geral do Projeto
 
-O objetivo deste trabalho é analisar fatores socioeconômicos de diversos países e conectá-los com a necessidade de aprendizado contínuo na força de trabalho do futuro. Para isso, o projeto realiza duas análises principais:
+Este projeto oferece uma abordagem multidisciplinar para entender tendências globais e o processo de aprendizado contínuo. Combinando a análise de dados socioeconômicos de diversos países com conceitos matemáticos de cálculo, exploramos como diferentes economias se posicionam para o futuro e como o conhecimento é adquirido e aprimorado ao longo do tempo.
 
-1.  **Análise de Dados (Python):** Utiliza dados de população e da participação do setor de serviços no PIB para calcular um **Índice de Prontidão para o Futuro (IPF)**. Funções estatísticas como média, variância, média ponderada e correlação são aplicadas para extrair insights dos dados.
-2.  **Modelagem Matemática (Cálculo):** Modela uma **Curva de Aprendizado** usando uma função de crescimento exponencial. A velocidade e o acúmulo de conhecimento são explorados através de derivadas e integrais. A taxa de aprendizado no modelo é dinamicamente ajustada pelo IPF de cada país, conectando a estrutura econômica à capacidade de requalificação.
+Em termos simples, o projeto busca responder:
 
-O projeto busca alinhar as conclusões com os **Objetivos de Desenvolvimento Sustentável (ODS)** 4 (Educação de Qualidade) e 8 (Trabalho Decente e Crescimento Econômico) da ONU.
+1.  **Como países se comparam** em termos de indicadores chave (população, participação de serviços no PIB) ao longo do tempo?
+2.  **Podemos prever a capacidade de "aprendizado"** (adaptação a novas realidades e tecnologias) de um país com base em sua estrutura econômica?
 
-## 📂 Estrutura do Projeto
+## Funcionalidades Principais
 
-- `analise_dados.ipynb`: Notebook Jupyter contendo a análise completa, desde o carregamento e processamento dos dados até a modelagem matemática e as visualizações interativas.
-- `funcoes.py`: Módulo Python que centraliza as funções para carregamento, processamento de dados e os cálculos estatísticos.
-- `gs_dados/`: Diretório que armazena os datasets em formato `.csv` utilizados na análise.
-- `README.md`: Este arquivo.
+- **Coleta e Processamento de Dados:** Extrai e organiza dados históricos e recentes de população e a porcentagem de serviços no Produto Interno Bruto (PIB) de diferentes nações.
+- **Análise Estatística:** Calcula métricas importantes como média, variância e correlação para entender as relações entre os dados.
+- **Índice de Prontidão para o Futuro (IPF):** Um indicador desenvolvido no projeto que reflete a capacidade de uma economia de se adaptar a mudanças, baseado na relevância do setor de serviços no seu PIB.
+- **Modelagem da Curva de Aprendizado:** Utiliza princípios de cálculo (limites, derivadas) para simular o processo de aquisição de conhecimento, mostrando como o "IPF" de um país pode influenciar sua velocidade de aprendizado e desenvolvimento.
 
-## 🚀 Como Executar
+## Como Usar
 
-Para visualizar e interagir com a análise, siga os passos abaixo:
+Para explorar o projeto, siga os passos abaixo:
 
-1.  **Clone o repositório:**
+### 1. Instalação
 
-    ```bash
-    git clone https://github.com/Caioncaminha/gspythoncalculo
-    cd gspythoncalculo
-    ```
+Certifique-se de ter o Python instalado. Em seguida, instale as dependências necessárias:
 
-2.  **Crie e ative um ambiente virtual:**
+```bash
+pip install -r requirements.txt
+```
 
-    ```bash
-    python -m venv .venv
-    source .venv/bin/activate
-    ```
+### 2. Execução do Notebook Interativo
 
-    _(No Windows, use `\.venv\Scripts\activate`)_
+O principal ambiente para exploração e visualização é o Jupyter Notebook. Ele demonstra a integração entre a análise de dados e a modelagem da curva de aprendizado.
 
-3.  **Instale as dependências:**
-    Crie um arquivo `requirements.txt` com o conteúdo abaixo e execute o comando `pip install -r requirements.txt`.
+```bash
+jupyter lab analise_dados.ipynb
+```
 
-    ```
-    pandas
-    matplotlib
-    ipywidgets
-    numpy
-    jupyterlab
-    ```
+Abra o arquivo `analise_dados.ipynb` e execute as células sequencialmente para ver a análise em ação, incluindo gráficos interativos que mostram a curva de aprendizado de diferentes países.
 
-4.  **Inicie o Jupyter Lab:**
+### 3. Análise de Séries Temporais via Script
 
-    ```bash
-    jupyter lab
-    ```
+Para realizar análises mais detalhadas sobre a série histórica de dados de países específicos, você pode executar o script `funcoes_basicas.py` diretamente. Este script inclui exemplos de como obter dados históricos, calcular médias, variâncias e correlações para um país selecionado.
 
-5.  No navegador, abra o arquivo `analise_dados.ipynb` e execute as células.
+```bash
+python funcoes_basicas.py
+```
 
-## 🛠️ Dependências
+## Estrutura do Projeto
 
-As principais bibliotecas utilizadas no projeto são:
+- `analise_dados.ipynb`: O notebook principal para a análise exploratória, modelagem da curva de aprendizado e visualizações interativas.
+- `calculo.py`: Contém funções para carregar, processar e unificar dados recentes, além de funções para cálculo de médias, variâncias e correlações para um _snapshot_ atualizado dos dados.
+- `funcoes_basicas.py`: Fornece funções para carregar e processar dados históricos, além de funções para análises estatísticas específicas para a _série temporal_ de cada país.
+- `matematica.py`: Um módulo utilitário com implementações puras de funções matemáticas como média, variância, covariância e correlação, usadas pelas outras funções de análise.
+- `gs_dados/`: Pasta que armazena os arquivos CSV com os dados brutos de países, população e percentual de serviços no PIB.
+- `requirements.txt`: Lista todas as bibliotecas Python necessárias para o projeto.
 
-- `pandas`
-- `numpy`
-- `matplotlib`
-- `ipywidgets`
-- `jupyterlab`
+## Conexão com os Objetivos de Desenvolvimento Sustentável (ODS)
 
-Certifique-se de instalá-las usando o arquivo `requirements.txt` conforme as instruções acima.
+Este projeto se alinha a importantes Objetivos de Desenvolvimento Sustentável da ONU:
+
+- **ODS 4: Educação de Qualidade:** A modelagem da curva de aprendizado destaca a importância da educação contínua e da adaptabilidade para o desenvolvimento individual e nacional.
+- **ODS 8: Trabalho Decente e Crescimento Econômico:** A análise do IPF e sua relação com a velocidade de aprendizado sugere como a estrutura econômica de um país e a capacidade de sua força de trabalho em se adaptar são cruciais para um crescimento econômico sustentável e a criação de empregos de qualidade.
+
+## Conclusão
+
+Através da combinação de análise de dados e modelagem matemática, este projeto ilustra a intrínseca relação entre a estrutura econômica de uma nação e sua capacidade de aprendizado e adaptação. Ao priorizar estratégias que fomentem o aprendizado contínuo, governos e instituições podem construir forças de trabalho mais resilientes e preparadas para os desafios do futuro.
 
 ## 👥Integrantes
 
