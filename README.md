@@ -13,31 +13,34 @@ O projeto busca alinhar as conclusões com os **Objetivos de Desenvolvimento Sus
 
 ## 📂 Estrutura do Projeto
 
--   `analise_dados.ipynb`: Notebook Jupyter contendo a análise completa, desde o carregamento e processamento dos dados até a modelagem matemática e as visualizações interativas.
--   `funcoes.py`: Módulo Python que centraliza as funções para carregamento, processamento de dados e os cálculos estatísticos.
--   `gs_dados/`: Diretório que armazena os datasets em formato `.csv` utilizados na análise.
--   `contexto.md`: Arquivo com a descrição original e os requisitos do desafio da Global Solution.
--   `README.md`: Este arquivo.
+- `analise_dados.ipynb`: Notebook Jupyter contendo a análise completa, desde o carregamento e processamento dos dados até a modelagem matemática e as visualizações interativas.
+- `funcoes.py`: Módulo Python que centraliza as funções para carregamento, processamento de dados e os cálculos estatísticos.
+- `gs_dados/`: Diretório que armazena os datasets em formato `.csv` utilizados na análise.
+- `README.md`: Este arquivo.
 
 ## 🚀 Como Executar
 
 Para visualizar e interagir com a análise, siga os passos abaixo:
 
 1.  **Clone o repositório:**
+
     ```bash
-    git clone <URL_DO_REPOSITORIO>
-    cd <NOME_DO_DIRETORIO>
+    git clone https://github.com/Caioncaminha/gspythoncalculo
+    cd gspythoncalculo
     ```
 
 2.  **Crie e ative um ambiente virtual:**
+
     ```bash
     python -m venv .venv
     source .venv/bin/activate
     ```
-    *(No Windows, use `\.venv\Scripts\activate`)*
+
+    _(No Windows, use `\.venv\Scripts\activate`)_
 
 3.  **Instale as dependências:**
     Crie um arquivo `requirements.txt` com o conteúdo abaixo e execute o comando `pip install -r requirements.txt`.
+
     ```
     pandas
     matplotlib
@@ -47,6 +50,7 @@ Para visualizar e interagir com a análise, siga os passos abaixo:
     ```
 
 4.  **Inicie o Jupyter Lab:**
+
     ```bash
     jupyter lab
     ```
@@ -57,10 +61,15 @@ Para visualizar e interagir com a análise, siga os passos abaixo:
 
 As principais bibliotecas utilizadas no projeto são:
 
--   `pandas`
--   `numpy`
--   `matplotlib`
--   `ipywidgets`
--   `jupyterlab`
+- `pandas`
+- `numpy`
+- `matplotlib`
+- `ipywidgets`
+- `jupyterlab`
 
 Certifique-se de instalá-las usando o arquivo `requirements.txt` conforme as instruções acima.
+
+## 👥Integrantes
+
+- Caio Nascimento Caminha - RM564789
+- Giovana Rosatti Parreira - RM562275
